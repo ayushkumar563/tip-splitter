@@ -6,6 +6,8 @@ A premium Tip Calculator and Bill Splitter with a dark Tactile Brutalism aesthet
 ## Live Demo
 [Live Demo Link](https://ayushkumar563.github.io/tip-splitter/) *(Deployed on GitHub Pages)*
 
+![App Screenshot](screenshot.png)
+
 ## Tech Stack
 - **HTML5** (Semantic layout and forms)
 - **CSS3** (CSS Grid, CSS Variables, Brutalist UI styling)
