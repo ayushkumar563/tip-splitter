@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Splitter</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="splitter-container">
+        <header>
+            <h1>Split the Bill</h1>
+            <p>Calculate tips and per-person costs with precision.</p>
+        </header>
+
+        <div class="calculator-grid">
+            <section class="input-section">
+                <div class="input-group">
+                    <label for="bill-amount">Bill Amount</label>
+                    <div class="input-wrapper">
+                        <span class="currency-symbol">$</span>
+                        <input type="number" id="bill-amount" placeholder="0.00" min="0" step="0.01">
+                    </div>
+                    <span class="error-msg" id="bill-error"></span>
+                </div>
+
+                <div class="input-group">
+                    <label>Select Tip %</label>
+                    <div class="tip-grid">
+                        <button class="tip-btn" data-val="5">5%</button>
+                        <button class="tip-btn" data-val="10">10%</button>
+                        <button class="tip-btn" data-val="15">15%</button>
+                        <button class="tip-btn" data-val="25">25%</button>
+                        <button class="tip-btn" data-val="50">50%</button>
+                        <input type="number" id="custom-tip" class="custom-tip-input" placeholder="Custom" min="0">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="label-row">
+                        <label for="people-count">Number of People</label>
+                        <span class="error-msg" id="people-error"></span>
+                    </div>
+                    <div class="input-wrapper">
+                        <span class="icon-symbol">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                        </span>
+                        <input type="number" id="people-count" placeholder="1" min="1" step="1">
+                    </div>
+                </div>
+            </section>
+
+            <section class="result-section">
+                <div class="result-row">
+                    <div class="result-labels">
+                        <h3>Tip Amount</h3>
+                        <p>/ person</p>
+                    </div>
+                    <div class="result-value" id="tip-amount">$0.00</div>
+                </div>
+
+                <div class="result-row">
+                    <div class="result-labels">
+                        <h3>Total</h3>
+                        <p>/ person</p>
+                    </div>
+                    <div class="result-value" id="total-amount">$0.00</div>
+                </div>
+
+                <button id="reset-btn" disabled>Reset</button>
+            </section>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
